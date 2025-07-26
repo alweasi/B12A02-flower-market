@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Global styles  */
-
+/* --------------------------
+   Global Styles
+--------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -16,12 +17,16 @@
   --paragraph-color: hsla(0, 0%, 0%, 0.5);
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Noto Serif", serif;
 }
 
-html {
-  font-size: 62.5%;
+img {
+  max-width: 100%;
 }
 
 .wrapper {
@@ -37,31 +42,27 @@ html {
 }
 
 .primary_btn {
-  text-decoration: none;
   display: inline-block;
+  padding-block: 1.9rem;
+  text-align: center;
+  text-decoration: none;
   color: var(--secondary-heading-color);
   background-color: var(--primary-color);
   font-size: 1.6rem;
-  padding-block: 1.9rem;
   font-weight: 600;
-  text-align: center;
-}
-
-img {
-  max-width: 100%;
 }
 
 h1 {
+  margin-bottom: 1.3rem;
   font-size: 6.5rem;
   font-weight: bold;
   line-height: 1.2;
-  margin-bottom: 1.3rem;
 }
 
 h2 {
+  margin-bottom: 1.6rem;
   font-size: 5rem;
   font-weight: bold;
-  margin-bottom: 1.6rem;
 }
 
 h4 {
@@ -69,7 +70,7 @@ h4 {
   font-weight: medium;
 }
 
-ul li {
+p {
   font-size: 2.2rem;
   color: var(--paragraph-color);
 }
@@ -78,20 +79,21 @@ span {
   color: var(--primary-color);
 }
 
-p {
-  font-size: 2.2rem;
-  color: var(--paragraph-color);
-}
-
 a {
-  text-decoration: none;
   display: inline-block;
+  text-decoration: none;
   font-size: 2rem;
   color: var(--paragraph-color);
 }
 
-/* Header styles  */
+ul li {
+  font-size: 2.2rem;
+  color: var(--paragraph-color);
+}
 
+/* --------------------------
+   Header Styles
+--------------------------- */
 #header {
   display: flex;
   justify-content: space-between;
@@ -109,15 +111,15 @@ nav ul {
   justify-content: flex-end;
 }
 
-.nav-bold {
-  font-weight: bold;
-  color: var(--cart-heading-color);
-}
-
 .navigation {
   display: flex;
   justify-content: flex-end;
   gap: 4.8rem;
+}
+
+.nav-bold {
+  font-weight: bold;
+  color: var(--cart-heading-color);
 }
 
 .cart {
@@ -127,26 +129,28 @@ nav ul {
 }
 
 .cart p {
-  color: var(--cart-heading-color);
   font-size: 2rem;
+  color: var(--cart-heading-color);
 }
 
-/* Hero styles  */
-
+/* --------------------------
+   Hero Styles
+--------------------------- */
 .hero {
   margin-top: 12rem;
   padding-top: 10rem;
   display: flex;
-  align-items: flex-end;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .hero > * {
   flex-basis: 100%;
 }
 
-/* plants styles  */
-
+/* --------------------------
+   Plants Styles
+--------------------------- */
 .plants {
   margin-block: 12rem 20rem;
 }
@@ -162,20 +166,21 @@ nav ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
   text-align: center;
+  gap: 3rem;
 }
 
 .single_card a {
   width: 100%;
 }
 
-/* Flower styles  */
-
+/* --------------------------
+   Flower Styles
+--------------------------- */
 .flower {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   column-gap: 6rem;
 }
 
@@ -190,13 +195,13 @@ nav ul {
 .flower_img::after {
   content: "";
   position: absolute;
-  background-image: url(./assets/trusted-badge.png);
-  background-position: center;
-  background-size: cover;
   top: -18%;
   right: -17%;
   width: 28rem;
   height: 28rem;
+  background-image: url(./assets/trusted-badge.png);
+  background-position: center;
+  background-size: cover;
 }
 
 .flower_list ul {
@@ -210,8 +215,9 @@ nav ul {
   list-style-type: disc;
 }
 
-/* delas styles  */
-
+/* --------------------------
+   Deals Styles
+--------------------------- */
 .deals {
   margin-block: 12rem;
 }
@@ -226,15 +232,15 @@ nav ul {
 .bloom,
 .ana,
 .zabo {
-  background-color: #00000068;
-  background-size: cover;
-  background-position: center;
   padding-block: 6.5rem;
-  border-radius: 1rem;
   text-align: center;
+  border-radius: 1rem;
+  background-color: #00000068;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
   color: white;
   font-weight: bold;
-  background-blend-mode: multiply;
 }
 
 .bloom {
@@ -246,7 +252,6 @@ nav ul {
 }
 
 .zabo {
-  background-image: url(./assets/deal-zabo.png);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -254,6 +259,7 @@ nav ul {
   gap: 2rem;
   grid-column: 2/3;
   grid-row: 1/3;
+  background-image: url(./assets/deal-zabo.png);
 }
 
 .zabo h4 {
@@ -265,23 +271,24 @@ nav ul {
 }
 
 .deals_box a {
-  text-decoration: underline;
   color: white;
   font-weight: 500;
+  text-decoration: underline;
 }
 
-/* subscribe styles  */
-
+/* --------------------------
+   Subscribe Styles
+--------------------------- */
 .subscribe {
-  background-image: url(./assets/news-letter-bg.png);
+  padding-block: 19rem;
+  text-align: center;
+  color: var(--secondary-heading-color);
   background-color: #00000065;
-  background-blend-mode: multiply;
+  background-image: url(./assets/news-letter-bg.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-block: 19rem;
-  color: var(--secondary-heading-color);
-  text-align: center;
+  background-blend-mode: multiply;
 }
 
 .subscribe_box {
@@ -291,23 +298,24 @@ nav ul {
 }
 
 .subscribe_box input {
+  width: 60%;
+  padding: 1.8rem;
   font-family: "Noto serif";
   font-size: 1.6rem;
-  padding: 1.8rem;
-  background-color: var(--secondary-heading-color);
   color: var(--paragraph-color);
-  width: 60%;
+  background-color: var(--secondary-heading-color);
 }
 
 .subscribe_box a {
-  background: var(--primary-color);
-  color: var(--secondary-heading-color);
   padding: 1.8rem 5rem;
   font-size: 1.6rem;
+  color: var(--secondary-heading-color);
+  background: var(--primary-color);
 }
 
-/* footer styles  */
-
+/* --------------------------
+   Footer Styles
+--------------------------- */
 .footer {
   display: flex;
   align-items: flex-start;
@@ -317,11 +325,11 @@ nav ul {
 
 .footer_logo {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  flex-direction: column;
-  row-gap: 1.6rem;
   flex-basis: 40%;
+  row-gap: 1.6rem;
 }
 
 .footer_links_left,
@@ -329,18 +337,21 @@ nav ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  row-gap: 2.6rem;
   flex-basis: 20%;
+  row-gap: 2.6rem;
 }
 
 .social_links {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  column-gap: 2.4rem;
   flex-basis: 20%;
+  column-gap: 2.4rem;
 }
 
+/* --------------------------
+   Media Queries
+--------------------------- */
 @media (width < 628px) {
   html {
     font-size: 50%;
@@ -354,8 +365,7 @@ nav ul {
     line-height: 1.4;
   }
 
-  /* header styles  */
-
+  /* Header */
   #header {
     margin-inline: 2.2rem;
   }
@@ -363,16 +373,15 @@ nav ul {
   .logo img {
     width: 65%;
   }
+
   nav {
     display: none;
   }
 
-  /* hero styles  */
-
+  /* Hero */
   .hero {
     margin-top: 2.8rem;
     padding-top: 0;
-    display: flex;
     flex-direction: column-reverse;
     row-gap: 2.8rem;
   }
@@ -381,20 +390,18 @@ nav ul {
     padding-inline: 2rem;
   }
 
-  /* Plants styles  */
-
+  /* Plants */
   .plants {
     padding-inline: 2rem;
     margin-block: 6rem 5rem;
   }
+
   .plants_card {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 
-  /* flower styles  */
-
+  /* Flower */
   .flower {
     padding-inline: 2rem;
     flex-direction: column;
@@ -405,45 +412,39 @@ nav ul {
     display: none;
   }
 
-  /* delas styles  */
-
+  /* Deals */
   .deals {
     padding-inline: 2rem;
     margin-block: 4rem;
   }
 
   .deals_box {
-    display: grid;
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
+
   .zabo {
-    gap: 1rem;
     grid-column: 1/2;
     grid-row: 3/4;
+    gap: 1rem;
   }
 
-  .zabo h4 {
-    font-size: 2.2rem;
-  }
-
+  .zabo h4,
   .zabo a {
     font-size: 2.2rem;
   }
 
-  /* subscribe styles  */
-
+  /* Subscribe */
   .subscribe {
     padding-inline: 2rem;
   }
+
   .subscribe h2 {
     font-size: 3rem;
   }
 
-  /* footer styles  */
-
+  /* Footer */
   .footer {
-    display: flex;
     flex-direction: column;
     row-gap: 2rem;
     padding-inline: 2rem;
